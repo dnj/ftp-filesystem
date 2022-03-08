@@ -29,15 +29,5 @@
             "@test:codestyle"
         ]
     },
-    "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/home/composer/ftp"
-        },
-        {
-            "type": "path",
-            "url": "/home/composer/ftp-native"
-        }
-    ]
+    "minimum-stability": "dev"
 }
