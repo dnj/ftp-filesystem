@@ -1,0 +1,43 @@
+{
+    "name": "dnj/ftp-filesystem",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4",
+        "dnj/filesystem": "^1.0.0",
+        "dnj/tmp-filesystem": "^1.0.0",
+        "dnj/ftp-native": "dev-master"
+        
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.4.6",
+		"phpunit/phpunit": "^9.5",
+		"friendsofphp/php-cs-fixer": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "dnj\\Filesystem\\Ftp\\": "src/"
+        }
+    },
+    "scripts": {
+        "test:types": "vendor/bin/phpstan analyze",
+        "test:phpunit": "vendor/bin/phpunit",
+        "test:codestyle": "vendor/bin/php-cs-fixer fix -v --dry-run --stop-on-violation --using-cache=no",
+        "test": [
+            "@test:types",
+            "@test:phpunit",
+            "@test:codestyle"
+        ]
+    },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/home/composer/ftp"
+        },
+        {
+            "type": "path",
+            "url": "/home/composer/ftp-native"
+        }
+    ]
+}
